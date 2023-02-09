@@ -9,12 +9,12 @@ public class TradesController : ControllerBase
     [HttpGet("~/api/exchangeList")]
     public IActionResult GetExchangeList()
     {
-        var values = new List<Exchange>{
-            new Exchange { name = "Binance" },
-            new Exchange { name = "Coinbase" },
-            new Exchange { name = "Huobi" }
-        };
-        var json = JsonConvert.SerializeObject(values);
+        List<string> exchangeStrings = new List<string>(new string[] { "Binance", "Coinbase", "Huobi" });
+        var exchangeList = exchangeStrings.Select(t => new Exchange
+        {
+            name = t
+        });
+        var json = JsonConvert.SerializeObject(exchangeList);
         return Ok(json);
     }
 
