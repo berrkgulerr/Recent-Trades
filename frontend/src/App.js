@@ -75,6 +75,31 @@ class App extends Component {
 		}
 	};
 
+	RowTable = () => (
+		<Table striped bordered hover responsive >
+			<thead>
+			<tr>
+				<th scope="col" class="text-center">Asset Symbol</th>
+				<th scope="col" class="text-center">Asset Quantity</th>
+				<th scope="col" class="text-center">Quote Asset Symbol</th>
+				<th scope="col" class="text-center">Quote Asset Quantity</th>
+				<th scope="col" class="text-center">Date</th>
+			</tr>
+			</thead>
+			<tbody>
+			{this.state.tradeList.map((trade) => (
+				<tr>
+				<td class="text-center">{trade.assetSymbol}</td>
+				<td class="text-center">{trade.assetQuantity}</td>
+				<td class="text-center">{trade.quoteAssetSymbol}</td>
+				<td class="text-center">{trade.quoteAssetQuantity}</td>
+				<td class="text-center">{trade.date}</td>
+				</tr>
+			))}
+			</tbody>
+		</Table>
+	);
+
 	DropDownExchange = () => (
 		<Dropdown className="w-100">
 			<Dropdown.Toggle variant="primary" id="dropdown-exchange">
@@ -114,31 +139,6 @@ class App extends Component {
 			))}
 			</Dropdown.Menu>
 		</Dropdown>
-	);
-
-	RowTable = () => (
-		<Table striped bordered hover responsive >
-			<thead>
-			<tr>
-				<th scope="col" class="text-center">Asset Symbol</th>
-				<th scope="col" class="text-center">Asset Quantity</th>
-				<th scope="col" class="text-center">Quote Symbol</th>
-				<th scope="col" class="text-center">Quote Quantity</th>
-				<th scope="col" class="text-center">Date</th>
-			</tr>
-			</thead>
-			<tbody>
-			{this.state.tradeList.map((trade) => (
-				<tr>
-				<td class="text-center">{trade.assetSymbol}</td>
-				<td class="text-center">{trade.assetQuantity}</td>
-				<td class="text-center">{trade.quoteAssetSymbol}</td>
-				<td class="text-center">{trade.quoteAssetQuantity}</td>
-				<td class="text-center">{trade.date}</td>
-				</tr>
-			))}
-			</tbody>
-		</Table>
 	);
 
 	render(){
