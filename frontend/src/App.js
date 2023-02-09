@@ -102,15 +102,14 @@ class App extends Component {
 			</Dropdown.Toggle>
 
 			<Dropdown.Menu style={{ maxHeight: "250px", overflowY: "auto" }}>
-			{this.state.symbolList.map((sym, index) => (
+			{this.state.symbolList.map((symbol) => (
 				<Dropdown.Item
-				key={index}
 				onClick={() => {
-					this.setState({curQuote :sym.Quote});
-					this.setState({curAsset :sym.Base});
+					this.setState({curQuote :symbol.Quote});
+					this.setState({curAsset :symbol.Base});
 				}}
 				>
-				{sym.Base + "-" + sym.Quote}
+				{symbol.Base + "-" + symbol.Quote}
 				</Dropdown.Item>
 			))}
 			</Dropdown.Menu>
