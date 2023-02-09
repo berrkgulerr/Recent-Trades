@@ -11,7 +11,7 @@ public class TradesController : ControllerBase
     {
         var values = new List<Exchange>{
             new Exchange { name = "Binance" },
-            new Exchange { name = "CoinBase" },
+            new Exchange { name = "Coinbase" },
             new Exchange { name = "Huobi" }
         };
         var json = JsonConvert.SerializeObject(values);
