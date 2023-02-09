@@ -1,22 +1,22 @@
 1) First go to CryptoIndexSeries directory
 
-## `cd CryptoIndexSeries`
+>>`cd CryptoIndexSeries`
 
 2) Start the dotnet server
 
-## `dotnet run`
+>>`dotnet run`
 
 3) Go to frontend folder
 
-## `cd frontend`
+>>`cd frontend`
 
 4) Install node modules
 
-## `npm install`
+>>`npm install`
 
 5) Start React App
 
-## `npm start`
+>>`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
