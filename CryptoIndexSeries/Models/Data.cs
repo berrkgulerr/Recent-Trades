@@ -2,7 +2,6 @@
 {
     public class Data
     {
-        public int? Id { get; set; }
         public string? Exchange { get; set; }
         public List<SymbolData>? SymbolData { get; set; }
     }

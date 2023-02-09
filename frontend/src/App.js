@@ -81,7 +81,6 @@ class App extends Component {
 			<Dropdown.Menu style={{ maxHeight: "150px", overflowY: "auto" }}>
 			{this.state.exchangeList.map((exchange) => (
 				<Dropdown.Item
-				key={exchange.id}
 				onClick={() => {
 					this.setState({ curExchange: exchange.name });
 				}}

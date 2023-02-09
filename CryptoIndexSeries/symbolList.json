@@ -1,6 +1,5 @@
 [
   {
-    "id": 0,
     "exchange": "Binance",
     "symbolData": [
       {
@@ -10728,7 +10727,6 @@
   
   
   {
-    "id": 1,
     "exchange": "Coinbase",
     "symbolData": [
       {
@@ -13641,7 +13639,6 @@
 
 
   {
-    "id": 2,
     "exchange": "Huobi",
     "symbolData": [
       {
