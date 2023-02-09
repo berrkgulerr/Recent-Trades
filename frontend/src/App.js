@@ -25,7 +25,7 @@ class App extends Component {
   
 	componentDidUpdate(prevProps, prevState) {
 		if (prevState.curExchange !== this.state.curExchange) {
-			if(this.state.curExchange.toLowerCase()=="huobi"){
+			if(this.state.curExchange.toLowerCase()==="huobi"){
 				this.setState({ curAsset: "btc", curQuote: "usdt" });
 			}
 			else this.setState({ curAsset: "BTC", curQuote: "USDT" });
