@@ -10,9 +10,9 @@ public class TradesController : ControllerBase
     public IActionResult GetExchangeList()
     {
         var values = new List<Exchange>{
-            new Exchange { id = 0, name = "Binance" },
-            new Exchange { id = 1, name = "CoinBase" },
-            new Exchange { id = 2, name = "Huobi" }
+            new Exchange { name = "Binance" },
+            new Exchange { name = "CoinBase" },
+            new Exchange { name = "Huobi" }
         };
         var json = JsonConvert.SerializeObject(values);
         return Ok(json);
