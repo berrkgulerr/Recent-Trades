@@ -25,7 +25,10 @@ class App extends Component {
   
 	componentDidUpdate(prevProps, prevState) {
 		if (prevState.curExchange !== this.state.curExchange) {
-			this.setState({ curAsset: "BTC", curQuote: "USDT" });
+			if(this.state.curExchange.toLowerCase()=="huobi"){
+				this.setState({ curAsset: "btc", curQuote: "usdt" });
+			}
+			else this.setState({ curAsset: "BTC", curQuote: "USDT" });
 			this.getSymbolList();
 			this.setState({ curAssetChanged: !this.state.curAssetChanged });
 		}
@@ -103,11 +106,11 @@ class App extends Component {
 				<Dropdown.Item
 				key={index}
 				onClick={() => {
-					this.setState({curQuote :sym.Quote.toUpperCase()});
-					this.setState({curAsset :sym.Base.toUpperCase()});
+					this.setState({curQuote :sym.Quote});
+					this.setState({curAsset :sym.Base});
 				}}
 				>
-				{sym.Base.toUpperCase() + "-" + sym.Quote.toUpperCase()}
+				{sym.Base + "-" + sym.Quote}
 				</Dropdown.Item>
 			))}
 			</Dropdown.Menu>

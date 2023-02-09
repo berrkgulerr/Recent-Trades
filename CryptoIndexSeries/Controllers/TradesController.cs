@@ -45,8 +45,8 @@ public class TradesController : ControllerBase
         {
             return BadRequest();
         }
-
     }
+
 
     [HttpGet("~/api/{exchange}/{symbol}")]
     public async Task<ActionResult<IEnumerable<Trade>>> GetTrades(string exchange, string symbol)
@@ -99,7 +99,7 @@ public class TradesController : ControllerBase
 
         else if (exchange.ToLower() == "huobi")
         {
-            var url = $"https://api.huobi.pro/market/history/trade?symbol={assetSymbol[0].ToLower() + assetSymbol[1].ToLower()}&size=100";
+            var url = $"https://api.huobi.pro/market/history/trade?symbol={assetSymbol[0] + assetSymbol[1]}&size=100";
             var response = await httpClient.GetAsync(url);
             if(response.IsSuccessStatusCode)
             {
