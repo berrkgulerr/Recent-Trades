@@ -76,7 +76,7 @@ class App extends Component {
 	};
 
 	RowTable = () => (
-		<Table striped bordered hover responsive >
+		<Table striped bordered hover variant="dark" >
 			<thead>
 			<tr>
 				<th scope="col" class="text-center">Asset Symbol</th>
